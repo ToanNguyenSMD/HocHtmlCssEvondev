@@ -18,8 +18,19 @@ img {
   width: 20rem;
   height: 20rem;
   margin-bottom: 4rem;
-  background-image: linear-gradient(to right, #00aefd 30%, #ffa400 30%);
+  background-image: linear-gradient(to right, #00aefd , #ffa400);
+  cursor: pointer;
 }
+/*  bài 34 -- PHÂN BIỆT OPACITY 0, VISIBILITY HIDDEN, DISPLAY NONE
+
+-opacity: 0: vẫn chiếm diện tích, có thể nhấn vô được
+-visibility: hidden: vẫn chiếm diện tích, nhưng không nhấn vô được
+-display: none: biến mất hoàn toàn trên trang web, k chếm diện tích, k nhấn vô được
+
+*/
+
+
+
 /* làm text gradient */
 .title {
   font-weight: bold;
