@@ -1,3 +1,9 @@
+/* khai báo biến trong css */
+:root {
+  --primary-color: #00aefd;
+  --secondary-color: #ffa400;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -18,7 +24,7 @@ img {
   width: 20rem;
   height: 20rem;
   margin-bottom: 4rem;
-  background-image: linear-gradient(to right, #00aefd , #ffa400);
+  background-image: linear-gradient(to right, var(--primary-color) , var(--secondary-color));
   cursor: pointer;
 }
 /*  bài 34 -- PHÂN BIỆT OPACITY 0, VISIBILITY HIDDEN, DISPLAY NONE
@@ -69,9 +75,11 @@ img {
 }
 
 .shadow {
+  /* biến nội bộ, ghi đè lại biến */
+  --primary-color: purple;
   width: 20rem;
   height: 20rem;
-  background-color: black;
+  background-color: var(--primary-color);
   margin: 5rem auto;
 
   /* box-shadow : x y blur scale color
