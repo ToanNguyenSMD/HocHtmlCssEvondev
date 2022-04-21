@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#title {
+  color: red
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3rem;
+  color: orange
+}
+
+h2 {
+  color: blue;
+}
+
+/* h2 {
+  color: blue!important;
+} */
+
+/* uư tiên hơn .title, vì có .title thì bằng .title ở trên, thêm h2 nên độ ưu tiên cao hơn */
+h2.title {
+  color: blue;
+}
+
+/* độ ưu tiên trong css 
+
+tags < class < ID < inline style < !important.
+
+*/
+
+/* khi rê chuột vào các class, tag trong vscode sẽ hiển thị độ uu tiên
+tags là: 0 0 1,
+class là: 0 1 0,
+id là: 1 0 0
+
+nó sẽ so sánh theo cột,từ trái qua phải, gặp 1 ở cái nào thì cái đó ưu tiên hơn
+
+*/
