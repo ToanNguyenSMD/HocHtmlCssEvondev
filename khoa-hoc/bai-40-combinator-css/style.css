@@ -1,0 +1,29 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* yêu cầu:chọn element có class là .title nằm liền kề element h3 */
+/* 
+ - dấu + : chọn thằng liền kề sau, cùng cấp,
+ - dấu ~ : chọn thằng đứng sau. cùng cấp
+
+*/
+h3 + .title {
+  color: green
+}
+
+h3 ~ .title2 {
+  color: blue;
+}
