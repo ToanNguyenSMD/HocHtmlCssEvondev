@@ -26,12 +26,27 @@ img {
   font-size: 3rem;
   margin-left: 2rem;
 
+  /* trình duyệt không hỗ trợ thuộc tính backgroud clip thì show style này */
+  color: #00aefd;
+
   /* phải có những dòng ở dưới */
+  /* color: transparent;
   background-image: linear-gradient(to right, #00aefd, #ffa400);
   display: inline-block;
-  color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; */
+}
+
+/* check xem trình duyệt có hỗ trợ 1 thuộc tính nào đó không */
+/* trình duyệt hỗ trợ thuộc tính backgroud clip thì show style này */
+@supports (-webkit-background-clip: text) {
+  .title {
+    color: transparent;
+    background-image: linear-gradient(to right, #00aefd, #ffa400);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
 .background {
