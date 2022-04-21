@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  font-size: 4rem;
+  font-weight: bold;
+}
+li:first-child {
+  color: red
+}
+/* lấy phần tử thứ 2 từ trên xuống */
+li:nth-child(2) {
+  color: purple
+}
+/* lấy phần tử thứ 2 từ dưới lên */
+li:nth-last-child(2) {
+  color: yellowgreen
+}
+/* tất cả trừ cái đầu tiên */
+li:not(:first-child) {
+
+}
+
+li:nth-child(odd) {
+  
+}
