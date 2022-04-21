@@ -67,3 +67,24 @@ img {
   background-image: linear-gradient(to right, rgba(0, 173, 253, 0.5), rgba(255, 166, 0, 0.5)), url("https://images.unsplash.com/photo-1650374471470-a46867a3ce06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   background-size: cover;
 }
+
+.shadow {
+  width: 20rem;
+  height: 20rem;
+  background-color: black;
+  margin: 5rem auto;
+
+  /* box-shadow : x y blur scale color
+    x dương thì đổ bóng về phải, âm thì về bên trái
+    y dương thì đổ bóng xuống dưới, âm thì lên trên
+    blur: là độ mờ
+    scale: mặc định là bằng chính nó
+  
+  */
+}
+
+.shadow-text {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 5px 0px red;
+}
