@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.boxed {
+  width: 15rem;
+  height: 5rem;
+  background-color: red;
+  /* transform:  scale(2); */
+  /* transform: thay đổi element nhưng không thay đổi kích thước, vị trí */
+  /* transform: rotate(45deg); */
+  /* transform: translateX(10px) translateY(10px); */
+
+  /* 100% là kích thước của element */
+  transform: translateX(100%); 
+  margin: 5rem;
+  /* xoay như hình bình hành */
+  transform: skewX(30deg);
+}
