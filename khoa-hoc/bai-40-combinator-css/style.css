@@ -27,3 +27,18 @@ h3 + .title {
 h3 ~ .title2 {
   color: blue;
 }
+
+/* select thẻ a có href bắt đầu bằng https */
+a[href^="https:"] {
+  color: red;
+}
+
+/* select thẻ a có href kết thúc bằng .vn */
+a[href$=".vn"] {
+  color: cyan
+}
+
+/* select thẻ a có chứa www */
+a[href*="www"] {
+  color: violet;
+}
