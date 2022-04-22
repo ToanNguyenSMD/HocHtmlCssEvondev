@@ -23,8 +23,11 @@ img {
   /* transform: translateX(10px) translateY(10px); */
 
   /* 100% là kích thước của element */
-  transform: translateX(100%); 
-  margin: 5rem;
+  /* transform: translateX(100%);  */
+  /* margin: 5rem; */
   /* xoay như hình bình hành */
-  transform: skewX(30deg);
+  /* transform: skewX(30deg); */
+  /* position: relative;
+  top:10px; */
+
 }
