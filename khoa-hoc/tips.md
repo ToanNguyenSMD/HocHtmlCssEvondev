@@ -53,3 +53,11 @@ BÀI 55 PSEUDO BEFORE AND AFTER
  
  
   -->
+
+BÀI 65 THỰC HANH FLEX BOX
+
+<!-- 
+  để truyền số âm trong hàm calc:
+  calc(-1*100px)
+
+ -->
