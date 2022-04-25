@@ -1,0 +1,46 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.boxed {
+  /* width: 5rem;
+  height: 5rem; */
+  display: inline-block;
+  /* background-color: black; */
+  margin: 2rem auto;
+  /* border-left: 10px solid red; */
+  /* border-right: 10px solid blue; */
+  /* border-top: 10px solid orange; */
+  /* border-bottom: 10px solid purple; */
+
+  /* TAM GIAC PHIA DUOI */
+  /* border-bottom: 10px solid purple;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent; */
+
+  /* TAM GIAC BEN TRAI */
+  /* border-left: 10px solid purple;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; */
+
+  /* TAM GIAC BEN PHAI */
+  /* border-right: 10px solid purple;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; */
+
+   /* TAM GIAC BEN TREN */
+  border-top: 10px solid purple;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
