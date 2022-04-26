@@ -1,0 +1,61 @@
+// sass style.scss style.css --watch --no-source-map
+
+$primary-color: #ffa400;
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  color: $primary-color;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin absoluteCenter($direction: "left") {
+  position: absolute;
+  @if $direction == "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+}
+.boxed {
+  // width: 10rem;
+  // height: 10rem;
+  @include size(10rem, 15rem);
+  background-color: red;
+}
+.container {
+  @include size(50rem, 50rem);
+  background-color: #ffa400;
+  position: relative;
+  .boxing {
+    @include size(10rem, 10rem);
+    background-color: #fff;
+    @include absoluteCenter("top");
+  }
+}

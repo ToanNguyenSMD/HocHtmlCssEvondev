@@ -1,0 +1,43 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  color: #ffa400;
+}
+
+.boxed {
+  width: 10rem;
+  height: 15rem;
+  background-color: red;
+}
+
+.container {
+  width: 50rem;
+  height: 50rem;
+  background-color: #ffa400;
+  position: relative;
+}
+.container .boxing {
+  width: 10rem;
+  height: 10rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
