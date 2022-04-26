@@ -101,13 +101,43 @@ img {
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__item {
-    width: calc((100% - 30*3px) / 4);
+    width: calc(25% - 1.5rem);
     border-radius: 10px;
     overflow: hidden;
-    
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .work {
+    &__item {
+      width: calc(50% - 1.5rem);
+      margin-bottom: 1.5rem;
+    }
+    &__list {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .work {
+    &__item {
+      width: calc(100%);
+    }
+    &__filter {
+      flex-direction: column;
+    }
+    &-tab {
+      flex-wrap: wrap;
+      justify-content: center;
+      &__item {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 }
