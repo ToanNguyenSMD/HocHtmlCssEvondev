@@ -1,5 +1,12 @@
 // sass style.scss style.css --watch --no-source-map
 
+$blue-color: #42a7fe;
+@mixin size($width: 0px, $height: 0px) {
+  width: $width;
+  height: $height;
+}
+
+
 html {
   font-size: 62.5%;
 }
