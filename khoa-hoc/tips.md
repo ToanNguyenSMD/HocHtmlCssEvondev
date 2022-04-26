@@ -65,5 +65,6 @@ BÀI 65 THỰC HANH FLEX BOX
 BÀI 70 THỰC HÀNH DROPDOWN
 <!-- 
   Khi dùng flex, để 1 element dịch về bên phải thì dùng margin left: auto
+  flex-shrink cho ảnh là 0 ( k bị thu hẹp lại, mặc định là 1 - được phép thu hẹp lại)
 
  -->

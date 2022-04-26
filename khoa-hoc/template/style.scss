@@ -6,6 +6,20 @@ $blue-color: #42a7fe;
   height: $height;
 }
 
+@mixin flexbox(
+  $align: flex-start, 
+  $justify: flex-start, 
+  $flex-direction: row, 
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+
 html {
   font-size: 62.5%;
 }

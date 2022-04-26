@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  background-color: #ddd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.post {
+  padding: 2rem;
+  margin: 5rem auto;
+  max-width: 100rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.post__media {
+  width: 10rem;
+  height: 10rem;
+  border-radius: inherit;
+  flex-shrink: 0;
+}
+.post__content {
+  width: 100%;
+  flex-grow: 1;
+}
