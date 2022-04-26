@@ -61,3 +61,9 @@ BÀI 65 THỰC HANH FLEX BOX
   calc(-1*100px)
 
  -->
+
+BÀI 70 THỰC HÀNH DROPDOWN
+<!-- 
+  Khi dùng flex, để 1 element dịch về bên phải thì dùng margin left: auto
+
+ -->

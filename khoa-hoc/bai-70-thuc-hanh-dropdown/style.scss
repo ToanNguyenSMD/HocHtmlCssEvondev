@@ -1,0 +1,106 @@
+// sass style.scss style.css --watch --no-source-map
+
+
+$blue-color: #42a7fe;
+@mixin size($width: 0px, $height: 0px) {
+  width: $width;
+  height: $height;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  background-color: #f3faff;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.dropdown {
+  width: 40rem;
+  margin: 2rem auto;
+  position:relative;
+  
+  &__select {
+    padding: 2rem 2.5rem 2rem 4rem;
+    background-color: $blue-color;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__text {
+    margin-left: 3.5rem;
+  }
+  &__caret {
+    margin-left: auto;
+  }
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+    transition:  all 0.2s linear;
+    &::before {
+      content: "";
+      position: absolute;
+     @include size(2rem, 2rem );
+      top: 0;
+      right: 2rem;
+      // border-right: 10px solid transparent;
+      // border-left: 10px solid transparent;
+      // border-bottom: 10px solid red;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: white;
+      border-radius: 3px;
+      // z-index: 1;
+    }
+    
+    // tạo 1 lớp ảo để khi hover khỏi select, thì dropdown list không bị mất
+    &::after {
+      content: "";
+      position: absolute;
+      top: -3rem;
+      left: 0;
+      background-color: transparent;
+      width: 100%;
+      height: 3rem;
+    }
+  }
+  &__item {
+    padding: 2rem 2.5rem 2rem 4rem;
+    display: flex;
+    align-items: center;
+    color: #b3bbce;
+    transition: all 0.2s linear;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    &:hover {
+      color: #74809d;
+      border-left-color:$blue-color;
+    }
+  }
+  &:hover {
+    .dropdown__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
