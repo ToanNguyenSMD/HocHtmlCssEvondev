@@ -68,3 +68,9 @@ BÀI 70 THỰC HÀNH DROPDOWN
   flex-shrink cho ảnh là 0 ( k bị thu hẹp lại, mặc định là 1 - được phép thu hẹp lại)
 
  -->
+
+BÀI 85: TÌM HIỂU VỀ CÁC THẺ TRONG FORM
+<!-- 
+  các thẻ input, select, textarea, button sẽ lấy style mặc định của trình duyệt, chứ không dùng style trong thẻ body.
+
+ -->
