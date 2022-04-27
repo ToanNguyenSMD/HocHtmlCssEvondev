@@ -19,6 +19,12 @@ $blue-color: #42a7fe;
   flex-wrap: $wrap;
 }
 
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
 
 html {
   font-size: 62.5%;
