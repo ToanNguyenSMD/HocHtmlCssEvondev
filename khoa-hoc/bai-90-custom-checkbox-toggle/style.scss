@@ -1,0 +1,132 @@
+// sass style.scss style.css --watch --no-source-map
+
+$blue-color: #42a7fe;
+$primary-color: #FE4F70;
+$secondary-color: #FFA387;
+@mixin size($width: 0px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start, 
+  $justify: flex-start, 
+  $flex-direction: row, 
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+// hide the HTML5 number input’s spin box?
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+.checkbox {
+  &__input {
+    display: none;
+
+    &:checked + .checkbox__label {
+      background-color: #7f6cfa;
+      .checkbox__spin {
+        transform: translateX(5rem);
+      }
+      .checkbox__text-on {
+        display: inline;
+      }
+      .checkbox__text-off {
+        display: none;
+      }
+    }
+
+    
+    
+  }
+
+  &__label {
+    display: flex;
+    @include size(10rem, 5rem);
+    background-color: #ccc; // 7f6cfa
+    border-radius: 5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition:  0.25s linear;
+
+  }
+
+  &__spin {
+    @include size(4rem);
+    background-color: #fff;
+    border-radius: 50%;
+    transition:  0.25s linear;
+    // transform: translateX(5rem);
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fff;
+    align-self: center;
+    // transition: all 0.25s ease;
+
+    &-off {
+      margin-left: 10px;
+    }
+    &-on {
+      display: none;
+      transform: translateX(-30px);
+
+    }
+  }
+
+
+}
