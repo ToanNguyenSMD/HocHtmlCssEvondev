@@ -68,3 +68,41 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance:textfield; /* Firefox */
 }
+
+.radio {
+  margin: 5rem;
+  &__input {
+    display: none;
+    &:checked + .radio__label:before {
+      background-color: #fc565f;
+      box-shadow: 0 0 0 4px #fff, 0 0 0 6px #fc565f;
+    }
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 5rem;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include size(2.5rem);
+      border-radius: 3rem;
+      background-color: #eff1f5;
+      box-shadow: 0 0 0 4px #eff1f5, 0 0 0 6px #b7c1cb;
+      transition: all 0.25s linear;
+    }
+  }
+  
+}
+
+.demo {
+  @include size(5rem);
+  margin-top: 3rem;
+  background-color: #42a7fe;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 15px blue;
+}

@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.radio {
+  margin: 5rem;
+}
+.radio__input {
+  display: none;
+}
+.radio__input:checked + .radio__label:before {
+  background-color: #fc565f;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #fc565f;
+}
+.radio__label {
+  position: relative;
+  padding-left: 5rem;
+  cursor: pointer;
+}
+.radio__label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 3rem;
+  background-color: #eff1f5;
+  box-shadow: 0 0 0 4px #eff1f5, 0 0 0 6px #b7c1cb;
+  transition: all 0.25s linear;
+}
+
+.demo {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 3rem;
+  background-color: #42a7fe;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 15px blue;
+}
