@@ -70,3 +70,26 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance:textfield; /* Firefox */
 }
+
+.file {
+  @include size(4rem);
+  border-radius: 1rem;
+  border: 1px solid $primary-color;
+  background-color: $secondary-color;
+  position: relative;
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    @include flexbox(center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 2;
+
+  }
+}
