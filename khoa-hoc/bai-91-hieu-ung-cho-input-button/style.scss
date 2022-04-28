@@ -1,0 +1,116 @@
+// sass style.scss style.css --watch --no-source-map
+
+$blue-color: #42a7fe;
+$primary-color: #fe4f6fbe;
+$secondary-color: #FFA387;
+@mixin size($width: 0px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start, 
+  $justify: flex-start, 
+  $flex-direction: row, 
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+// hide the HTML5 number input’s spin box?
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+.input-style {
+  padding: 2rem;
+  border: 1px solid #b7c1cb;
+  border-radius: 5px;
+  width: 100%;
+  color: #0e1e35;
+  font-size: 1.6rem;
+  transition: all 0.25s linear;
+
+  &::-webkit-input-placeholder {
+    color: #b7c1cb;
+  }
+
+  &:focus {
+    border-color: #ff695a;
+    box-shadow: 0 0 0px 4px #ffe1de;
+  }
+}
+
+.button-style {
+  width: 100%;
+  padding: 2rem;
+  border-radius:  8px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  background-color: $primary-color;
+  transition: all 0.25s linear;
+  box-shadow: 0 5px 0 0 #410611be;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+  &:active {
+    box-shadow: 0 2px 0 0 #410611be;
+    transform: translateY(2px);
+  }
+}
