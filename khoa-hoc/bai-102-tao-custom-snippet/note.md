@@ -1,0 +1,2 @@
+- Vào file -> Prefenrences -> user snippet -> chọn file cần tạo snippet
+- vào trang https://snippet-generator.app/ để tạo snippet cho nhanh, copy code paste vào
