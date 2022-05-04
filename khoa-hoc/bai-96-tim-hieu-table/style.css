@@ -1,0 +1,139 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+table {
+  width: 100%;
+}
+table th {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+table th, table td {
+  color: #8c94a7;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+table thead tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.desc {
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status {
+  display: inline-block;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+}
+.status--active {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.2);
+}
+
+.action {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.action-icon {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.toggle__input {
+  display: none;
+}
+.toggle__input:checked + .toggle__label {
+  background-color: #2c2184;
+}
+.toggle__input:checked + .toggle__label .toggle__spin {
+  background-color: #1ab7ff;
+  transform: translate(30px, -50%);
+}
+.toggle__label {
+  display: inline-block;
+  width: 4.5rem;
+  height: 7px;
+  border-radius: 7px;
+  background-color: #e9e8ea;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.toggle__spin {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #c2c1c4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transition: all 0.25s linear;
+}
+
+@media screen and (max-width: 1280px) {
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .table::-webkit-scrollbar {
+    display: none;
+  }
+}
