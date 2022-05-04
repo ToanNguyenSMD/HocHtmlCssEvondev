@@ -1,8 +1,9 @@
 // sass style.scss style.css --watch --no-source-map
 
 $blue-color: #42a7fe;
-$primary-color: #FE4F70;
-$secondary-color: #FFA387;
+$primary-color: #f74e53;
+$secondary-color: #fafbff;
+$text-color: #281667;
 @mixin size($width: 0px, $height: $width) {
   width: $width;
   height: $height;
@@ -40,7 +41,8 @@ body {
   font-weight: normal;
   background-color: #fbfbfd;
   padding: 5rem;
-  height: 100vh;
+  min-height: 100vh;
+  color: $text-color;
 }
 img {
   display: block;
@@ -74,9 +76,188 @@ input[type=number] {
 }
 
 .signup {
-  width: 100%;
+  width: 1200px;
   height: 100%;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  @include flexbox(stretch, space-between);
+  padding: 7rem;
+
+  &__content, &__image {
+    width: calc(50% - 4rem);
+  }
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
+  }
+
+  &__caption {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $primary-color;
+    margin-bottom: 4.5rem;
+    padding-left: 7rem;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 5rem;
+      height: 2px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+  }
+  &-social {
+    @include flexbox(stretch, space-between);
+    margin-bottom: 5rem;
+
+    &__item {
+      width: calc(50% - 1.5rem);
+      border: 1px solid #eee;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      padding: 1.5rem 2rem;
+      background-color: #fff;
+      cursor: pointer;
+      @include flexbox(center, center);
+      color: $text-color;
+    }
+    &__icon {
+      margin-right: 2rem;
+    }
+  }
+
+  &-form {
+ 
+    color: $text-color;
+    @include flexbox(stretch, space-between, row, wrap);
+    &__group {
+      @include flexbox(stretch, flex-start, column, wrap);
+      margin-bottom: 3rem;
+      width: calc(50% - 1.5rem);
+
+      label {
+        margin-bottom: 1.5rem;
+        padding-left:0.5rem;
+      }
+
+      input {
+        border: 1px solid #eee;
+        background-color: $secondary-color;
+        border-radius: 10px;
+        height: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: all 0.25s linear;
+
+        &:focus {
+          border-color: $primary-color;
+          background-color: rgba(250, 251, 255, 0.5);;
+        }
+      }
+      &:last-child{
+        width: 100%;
+      }
+    }
+
+    &__term {
+      margin-bottom: 5.5rem;
+      input {
+        display: none;
+        &:checked + .signup-form__term--label:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      label {
+        padding-left: 5rem;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 3rem;
+          height: 3rem;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          background-color: $secondary-color;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 1rem;
+          height: 2rem;
+          background-color: $secondary-color;;
+          top: -3px;
+          left: 1rem;
+          transform: rotate(45deg);
+          border-right: 3px solid $primary-color;
+          border-bottom: 3px solid $primary-color;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.25s linear;
+        }
+      }
+    }
+
+    &__submit {
+      @include size(7rem);
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 35%;
+      font-size: 3rem;
+      box-shadow: 10px 10px 20px rgb(247, 78, 83,0.2);
+      margin-bottom: 6rem;
+      transition: transform 0.25s linear;
+
+      &:active {
+        transform: translateY(3px);
+      }
+    }
+
+    &__link {
+      color: $primary-color;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    &__validate {
+      position: relative;
+      .signup-form__input {
+        padding-right: 6rem;
+
+      }
+      .signup-form__input:focus + .signup-form__check {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+
+    &__check {
+      @include size(3rem);
+      border-radius: 10px;
+      background-color: #eee;
+      color: $text-color;
+      @include flexbox(center, center);
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.25s ease;
+    }
+  }
 }

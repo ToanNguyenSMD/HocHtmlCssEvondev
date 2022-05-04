@@ -24,19 +24,40 @@
       <div class="signup-social">
         <div class="signup-social__item">
           <i class="fa-brands fa-google signup-social__icon"></i>
-          <span class="signup-social__text">Sig nup with Google</span>
+          <span class="signup-social__text">Sign up with Google</span>
         </div>
         <div class="signup-social__item">
           <i class="fa-brands fa-facebook signup-social__icon"></i>
-          <span class="signup-social__text">Sign nup with FaceBook</span>
+          <span class="signup-social__text">Sign up with Facebook</span>
         </div>
       </div>
       <form class="signup-form">
         <div class="signup-form__group">
           <label for="name" class="signup-form__label">Name</label>
-          <input type="text" id="name" class="signup-form__input">
+          <div class="signup-form__validate">
+            <input type="text" id="name" class="signup-form__input">
+            <div class="signup-form__check">
+              <i class="fa fa-check"></i>
+            </div>
+          </div>
+        </div>
+        <div class="signup-form__group">
+          <label for="email" class="signup-form__label">Email</label>
+          <input type="email" id="email" class="signup-form__input">
+        </div>
+        <div class="signup-form__group">
+          <label for="password" class="signup-form__label">Password</label>
+          <input type="text" id="password" class="signup-form__input">
         </div>
       </form>
+      <div class="signup-form__term">
+        <input type="checkbox" id="term">
+        <label for="term" class="signup-form__term--label">I have read and agree to the terms and conditions</label>
+      </div>
+      <button class="signup-form__submit">
+        <i class="fa fa-long-arrow-right"></i>
+      </button>
+      <p>Already have an account? <a href="#" class="signup-form__link">Sign in</a></p>
     </div>
     <div class="signup__image">
       <img src="./rocket.png" alt="">

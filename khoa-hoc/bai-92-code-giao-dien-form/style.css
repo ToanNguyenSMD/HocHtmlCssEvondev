@@ -12,7 +12,8 @@ body {
   font-weight: normal;
   background-color: #fbfbfd;
   padding: 5rem;
-  height: 100vh;
+  min-height: 100vh;
+  color: #281667;
 }
 
 img {
@@ -50,9 +51,196 @@ input[type=number] {
 }
 
 .signup {
-  width: 100%;
+  width: 1200px;
   height: 100%;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 7rem;
+}
+.signup__content, .signup__image {
+  width: calc(50% - 4rem);
+}
+.signup__heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #281667;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+}
+.signup__caption {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #f74e53;
+  margin-bottom: 4.5rem;
+  padding-left: 7rem;
+  position: relative;
+}
+.signup__caption:before {
+  position: absolute;
+  content: "";
+  width: 5rem;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: currentColor;
+}
+.signup-social {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 5rem;
+}
+.signup-social__item {
+  width: calc(50% - 1.5rem);
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: #281667;
+}
+.signup-social__icon {
+  margin-right: 2rem;
+}
+.signup-form {
+  color: #281667;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.signup-form__group {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  width: calc(50% - 1.5rem);
+}
+.signup-form__group label {
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+.signup-form__group input {
+  border: 1px solid #eee;
+  background-color: #fafbff;
+  border-radius: 10px;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: all 0.25s linear;
+}
+.signup-form__group input:focus {
+  border-color: #f74e53;
+  background-color: rgba(250, 251, 255, 0.5);
+}
+.signup-form__group:last-child {
+  width: 100%;
+}
+.signup-form__term {
+  margin-bottom: 5.5rem;
+}
+.signup-form__term input {
+  display: none;
+}
+.signup-form__term input:checked + .signup-form__term--label:after {
+  opacity: 1;
+  visibility: visible;
+}
+.signup-form__term label {
+  padding-left: 5rem;
+  position: relative;
+  cursor: pointer;
+}
+.signup-form__term label:before {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fafbff;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.signup-form__term label:after {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 2rem;
+  background-color: #fafbff;
+  top: -3px;
+  left: 1rem;
+  transform: rotate(45deg);
+  border-right: 3px solid #f74e53;
+  border-bottom: 3px solid #f74e53;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
+}
+.signup-form__submit {
+  width: 7rem;
+  height: 7rem;
+  background-color: #f74e53;
+  color: #fff;
+  border: none;
+  border-radius: 35%;
+  font-size: 3rem;
+  box-shadow: 10px 10px 20px rgba(247, 78, 83, 0.2);
+  margin-bottom: 6rem;
+  transition: transform 0.25s linear;
+}
+.signup-form__submit:active {
+  transform: translateY(3px);
+}
+.signup-form__link {
+  color: #f74e53;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.signup-form__validate {
+  position: relative;
+}
+.signup-form__validate .signup-form__input {
+  padding-right: 6rem;
+}
+.signup-form__validate .signup-form__input:focus + .signup-form__check {
+  background-color: #f74e53;
+  color: #fff;
+}
+.signup-form__check {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: #eee;
+  color: #281667;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s ease;
 }
