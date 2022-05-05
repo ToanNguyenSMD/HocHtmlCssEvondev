@@ -1,0 +1,73 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+img:hover {
+  filter: grayscale(2);
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+*::selection {
+  color: #fff;
+  background-color: orange;
+}
+
+.container {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar {
+  width: 5px;
+  background-color: #eee;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
