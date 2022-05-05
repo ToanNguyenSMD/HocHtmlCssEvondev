@@ -1,0 +1,96 @@
+// sass style.scss style.css --watch --no-source-map
+
+$blue-color: #42a7fe;
+$primary-color: #FE4F70;
+$secondary-color: #FFA387;
+@mixin size($width: 0px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start, 
+  $justify: flex-start, 
+  $flex-direction: row, 
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  // margin: 5rem;
+  color: #fff;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  cursor: pointer;
+}
+// hide the HTML5 number input’s spin box?
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+// tạo background màu chéo
+// #07047E, #1a3bda
+
+//dùng skewY để tạo thành hình bình hành, sau đó dùng translateY để kéo hình lên phía trên, nhưng lúc này nội dung thì cũng bị nằm chéo theo skewY, bị kéo theo do translateY luôn, vì thế ta sẽ tạo bg cho before hoặc after. chữ bị đè thì dùng z-index là -1
+
+.container {
+
+   margin: 0 auto;
+   height: 500px;
+   position: relative;
+   
+   &:before {
+    background-image: linear-gradient(to right bottom, #07047E, #1a3bda);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 40% 75%, 38% 85%, 0 100% );
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    z-index: -1;
+   }
+
+}
