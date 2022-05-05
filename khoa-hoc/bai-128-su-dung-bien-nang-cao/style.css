@@ -1,0 +1,76 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.card {
+  --card-color-title: #42a7fe;
+  --card-height-image: 300px;
+  width: 300px;
+  margin: 25px auto;
+  border: 1px solid #ccc;
+}
+.card__image {
+  height: var(--card-height-image);
+  object-fit: cover;
+  width: 100%;
+}
+.card__content {
+  padding: 2rem;
+}
+.card__title {
+  color: var(--card-color-title);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    --card-color-title: red;
+    --card-height-image: 200px;
+  }
+}
