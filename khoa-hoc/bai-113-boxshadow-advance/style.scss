@@ -74,6 +74,8 @@ input[type=number] {
 .square {
   @include size(5rem);
   background-color: orange;
+  // box-shadow: x y blur scale
+  // box shadow sẽ tạo thêm 1 cái bóng như thế nữa, x là tọa độ theo trục x của cái bóng so vs cái gốc, y là tọa độ theo trục x, scale là kích thước cộng thêm vào bóng theo cả chiều x, y
   box-shadow: 6rem 0 0  green, 
               12rem 0 0 red,
               0 6rem 0 0 purple,
