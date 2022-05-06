@@ -19,9 +19,13 @@
 <body>
   <div class="custom-checkbox">
     <input type="checkbox" class="custom-checkbox__input" id="checkbox">
-    <div class="custom-checkbox__box">
+    <!-- <div class="custom-checkbox__box">
       <i class="fa fa-star custom-checkbox__icon"></i>
-    </div>
+    </div> -->
+    <!-- để như này để có thể click vào icon, hoặc chỉ có mình icon -->
+    <label class="custom-checkbox__box" for="checkbox">
+      <i class="fa fa-star custom-checkbox__icon"></i>
+    </label>
     <label for="checkbox" class="custom-checkbox__label">Checkbox</label>
   </div>
 </body>

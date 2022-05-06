@@ -75,13 +75,28 @@ input[type=number] {
   @include flexbox(center);
   &__input {
     display: none;
+
+    &:checked + .custom-checkbox__box {
+      background-color: #42a7fe;
+      color: #fff;
+    }
   }
 
+
   &__box {
-    width: 5rem;
-    height: 5rem;
+   @include size(4rem);
     border: 1px solid #ccc;
     border-radius: 1rem;
-    @include flexbox(center, center)
+    @include flexbox(center, center);
+    margin-right: 2rem;
+    transition: all 0.25s linear;
+    cursor: pointer;
+    // background-color: #42a7fe;
+    // color: #fff;
+  }
+
+  &__label {
+    cursor: pointer;
+    border-color: #42a7fe;
   }
 }

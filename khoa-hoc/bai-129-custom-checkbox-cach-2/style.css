@@ -57,9 +57,13 @@ input[type=number] {
 .custom-checkbox__input {
   display: none;
 }
+.custom-checkbox__input:checked + .custom-checkbox__box {
+  background-color: #42a7fe;
+  color: #fff;
+}
 .custom-checkbox__box {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border: 1px solid #ccc;
   border-radius: 1rem;
   display: flex;
@@ -67,4 +71,11 @@ input[type=number] {
   justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-right: 2rem;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+.custom-checkbox__label {
+  cursor: pointer;
+  border-color: #42a7fe;
 }
